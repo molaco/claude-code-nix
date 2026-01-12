@@ -11,7 +11,7 @@
 { lib
 , stdenv
 , fetchurl
-, nodejs_22
+, nodejs_20
 , bun
 , cacert
 , bash
@@ -33,11 +33,11 @@ let
   # Runtime-specific configuration
   runtimeConfig = {
     node = {
-      pkg = nodejs_22;
-      runtimeBin = "${nodejs_22}/bin/node";
-      npmBin = "${nodejs_22}/bin/npm";
-      runCmd = "${nodejs_22}/bin/node --no-warnings --enable-source-maps";
-      nativeBuildInputs = [ nodejs_22 cacert ];
+      pkg = nodejs_20;
+      runtimeBin = "${nodejs_20}/bin/node";
+      npmBin = "${nodejs_20}/bin/npm";
+      runCmd = "${nodejs_20}/bin/node --no-warnings --enable-source-maps";
+      nativeBuildInputs = [ nodejs_20 cacert ];
       description = "Claude Code (Node.js) - AI coding assistant in your terminal";
       binName = "claude";
     };
